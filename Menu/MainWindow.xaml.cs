@@ -49,7 +49,7 @@ namespace Menu
                 while ((line = r.ReadLine()) != null)
                 {
                     primo.Add(line);
-                    Cbx_primo.Items.Add(line);
+                    cbx_primo.Items.Add(line);
                 }
             }
         }
@@ -84,34 +84,24 @@ namespace Menu
 
         private void aggiungi_Click(object sender, RoutedEventArgs e)
         {
-            if (cbx_antipasto.SelectedIndex != -1)
+            if (cbx_antipasto.SelectedIndex != -1 && cbx_primo.SelectedIndex != -1 && cbx_secondo.SelectedIndex != -1 && cbx_dolce.SelectedIndex != -1)
             {
                 lbox_selezione.Items.Add(cbx_antipasto.SelectedItem);
-                cbx_antipasto.SelectedIndex = -1;
-            }
-            else
-                MessageBox.Show("attenzione selezionare almeno un elemento", "attenzione", MessageBoxButton.OK);
-            if (Cbx_primo.SelectedIndex != -1)
-            {
-                lbox_selezione.Items.Add(Cbx_primo.SelectedItem);
-                Cbx_primo.SelectedIndex = -1;
-            }
-            else
-                MessageBox.Show("attenzione selezionare almeno un elemento", "attenzione", MessageBoxButton.OK);
-            if (cbx_secondo.SelectedIndex != -1)
-            {
+                lbox_selezione.Items.Add(cbx_primo.SelectedItem);
                 lbox_selezione.Items.Add(cbx_secondo.SelectedItem);
-                cbx_secondo.SelectedIndex = -1;
-            }
-            else
-                MessageBox.Show("attenzione selezionare almeno un elemento", "attenzione", MessageBoxButton.OK);
-            if (cbx_dolce.SelectedIndex != -1)
-            {
                 lbox_selezione.Items.Add(cbx_dolce.SelectedItem);
+                cbx_antipasto.SelectedIndex = -1;
+                cbx_primo.SelectedIndex = -1;
+                cbx_secondo.SelectedIndex = -1;
                 cbx_dolce.SelectedIndex = -1;
             }
             else
-                MessageBox.Show("attenzione selezionare almeno un elemento", "attenzione", MessageBoxButton.OK);
+            {
+                MessageBox.Show("attenzione selezionare tutte e 4 le scelte", "attenzione", MessageBoxButton.OK);
+                lbox_selezione.Items.Clear();
+            }
+                
+
         }
 
         private void rimuovi_Click_1(object sender, RoutedEventArgs e)

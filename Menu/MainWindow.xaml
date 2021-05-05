@@ -13,7 +13,7 @@
         <Label Content="secondo" HorizontalAlignment="Left" Margin="343,63,0,0" VerticalAlignment="Top"/>
         <Label Content="dolce" HorizontalAlignment="Left" Margin="503,63,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbx_antipasto" HorizontalAlignment="Left" Margin="33,91,0,0" VerticalAlignment="Top" Width="120" Loaded="antipasto"/>
-        <ComboBox x:Name="Cbx_primo" HorizontalAlignment="Left" Margin="181,91,0,0" VerticalAlignment="Top" Width="120" Loaded="primo"/>
+        <ComboBox x:Name="cbx_primo" HorizontalAlignment="Left" Margin="181,91,0,0" VerticalAlignment="Top" Width="120" Loaded="primo"/>
         <ComboBox x:Name="cbx_secondo" HorizontalAlignment="Left" Margin="326,91,0,0" VerticalAlignment="Top" Width="120" Loaded="secondo"/>
         <ComboBox x:Name="cbx_dolce" HorizontalAlignment="Left" Margin="494,91,0,0" VerticalAlignment="Top" Width="120" Loaded="dolce"/>
         <ListBox x:Name="lbox_selezione" HorizontalAlignment="Left" Height="100" Margin="238,118,0,0" VerticalAlignment="Top" Width="170"/>
