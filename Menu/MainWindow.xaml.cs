@@ -119,7 +119,6 @@ namespace Menu
             if (lbox_selezione.SelectedIndex != -1)
             {
                 lbox_selezione.Items.RemoveAt(lbox_selezione.SelectedIndex);
-
             }
             else
             {
